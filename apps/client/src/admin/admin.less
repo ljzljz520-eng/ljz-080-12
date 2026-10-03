@@ -1,0 +1,288 @@
+@primary: #d9682b;
+@bg: #f7f3ee;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  background: @bg;
+}
+
+.admin-shell {
+  min-height: 100vh;
+}
+
+.admin-sider {
+  background: #2b2118 !important;
+
+  .ant-menu {
+    background: transparent;
+    margin-top: 8px;
+  }
+
+  .ant-menu-item-selected {
+    background: @primary !important;
+  }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 16px 14px;
+
+  .brand-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #e8834a, #c8541c);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .brand-name {
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.3;
+  }
+
+  .brand-sub {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 11px;
+    margin-top: 2px;
+  }
+}
+
+.sider-footer {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 12px;
+}
+
+.admin-header {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  box-shadow: 0 1px 4px rgba(43, 33, 24, 0.06);
+  z-index: 1;
+
+  .header-title {
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  .header-user {
+    color: rgba(0, 0, 0, 0.55);
+    font-size: 13px;
+  }
+}
+
+.admin-content {
+  padding: 20px 24px 40px;
+}
+
+.page-card {
+  border-radius: 12px;
+
+  .page-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .page-title {
+    margin: 0 0 4px !important;
+  }
+}
+
+.muted {
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 12px;
+}
+
+.mono {
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 12px;
+}
+
+.elder-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f2b98a, #e8834a);
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.elder-name {
+  font-weight: 600;
+}
+
+.elder-meta {
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.suspension-alert {
+  margin-bottom: 12px;
+  border-radius: 8px;
+
+  .suspension-list {
+    margin: 4px 0 0;
+    padding-left: 18px;
+  }
+}
+
+.suspension-note {
+  .suspension-tag {
+    display: inline-block;
+    background: #fff7e6;
+    border: 1px solid #ffd591;
+    color: #d46b08;
+    border-radius: 4px;
+    font-size: 11px;
+    padding: 0 6px;
+    margin-bottom: 3px;
+  }
+
+  .suspension-reason {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.75);
+    line-height: 1.5;
+  }
+}
+
+.schedule-summary {
+  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 13px;
+}
+
+.row-suspended {
+  background: #fffbe6;
+
+  &:hover > td {
+    background: #fff7d6 !important;
+  }
+}
+
+.modal-alert {
+  margin-bottom: 16px;
+}
+
+.courier-select {
+  width: 130px;
+}
+
+.qr-pop {
+  text-align: center;
+
+  img {
+    width: 200px;
+    height: 200px;
+    display: block;
+  }
+
+  .qr-tip {
+    margin-top: 6px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  .qr-token {
+    font-family: Consolas, monospace;
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.35);
+    margin-top: 2px;
+  }
+}
+
+.confirm-timeline {
+  margin-top: 4px;
+
+  .ant-timeline-item-content {
+    font-size: 12px;
+  }
+}
+
+.result-radios {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-card {
+  border-radius: 10px;
+  text-align: center;
+
+  &.stat-green .ant-statistic-content {
+    color: #389e0d;
+  }
+
+  &.stat-orange .ant-statistic-content {
+    color: #d46b08;
+  }
+
+  &.stat-cyan .ant-statistic-content {
+    color: #08979c;
+  }
+
+  &.stat-red .ant-statistic-content {
+    color: #cf1322;
+  }
+
+  &.stat-purple .ant-statistic-content {
+    color: #722ed1;
+  }
+}
+
+.stats-detail {
+  margin-top: 16px;
+}
+
+.detail-card {
+  border-radius: 10px;
+  height: 100%;
+}
+
+.progress-wrap {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  padding: 8px 0;
+
+  .progress-legend {
+    font-size: 14px;
+
+    .muted {
+      margin-top: 6px;
+      line-height: 1.8;
+    }
+  }
+}
